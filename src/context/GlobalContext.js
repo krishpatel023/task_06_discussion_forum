@@ -1,8 +1,10 @@
 import React from "react";
 
 const GlobalContext = React.createContext({
-    messages : [],
-    setMessages : () => {},
+    questions : [],
+    setQuestions : () => {},
+    pageNumber : [],
+    setPageNumber : () => {},
 })
 
 export default GlobalContext

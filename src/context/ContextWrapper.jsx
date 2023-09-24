@@ -1,15 +1,17 @@
 import { useState } from 'react';
 import GlobalContext from './GlobalContext'
-
-var socket;
-
+import {initial_questions} from './initialStates'
 export default function ContextWrapper(props) {
     
-    const [messages,setMessages]=useState()
-    const value = {
-        messages,
-        setMessages,
+    const [questions,setQuestions]=useState(initial_questions)
+    const [pageNumber,setPageNumber] = useState(0)
+    const numberOfQuestionsPerPage = 10
 
+    const value = {
+        questions,
+        pageNumber,
+        setPageNumber,
+        numberOfQuestionsPerPage
     }
   return (
       <GlobalContext.Provider value={value}>

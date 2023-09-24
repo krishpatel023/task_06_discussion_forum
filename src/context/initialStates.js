@@ -1,0 +1,256 @@
+export const initial_questions = [
+  {
+    "title": "How to convert a string to an integer in JavaScript?",
+    "body": "I have a string containing a numeric value, and I want to convert it to an integer in JavaScript. What's the easiest way to do this?",
+    "tags": ["javascript", "string", "conversion", "integer"],
+    "author": "jsCoder123",
+    "time": "2023-09-24 10:00:00",
+    "views": 1567,
+    "comments": 3,
+    "answer_numbers": 5,
+    "answer_by": "teacher"
+  },
+  {
+    "title": "How to implement authentication in a Node.js application?",
+    "body": "I'm building a Node.js web application and need to implement user authentication. What are the recommended libraries and strategies for handling authentication in Node.js?",
+    "tags": ["node.js", "authentication"],
+    "author": "nodeDevGuy",
+    "time": "2023-09-23 15:30:00",
+    "views": 2345,
+    "comments": 5,
+    "answer_numbers": 7,
+    "answer_by": "student"
+  },
+  {
+    "title": "How to use Python's Pandas library to read and manipulate CSV files?",
+    "body": "I have a CSV file that I need to read and perform data manipulations on using Python. How can I use the Pandas library to achieve this?",
+    "tags": ["python", "pandas", "csv"],
+    "author": "pythonDataPro",
+    "time": "2023-09-22 09:45:00",
+    "views": 3456,
+    "comments": 8,
+    "answer_numbers": 6,
+    "answer_by": ""
+  },
+  {
+    "title": "What is the difference between REST and GraphQL APIs?",
+    "body": "I'm trying to understand the differences between RESTful APIs and GraphQL. When should I use one over the other, and what are the key distinctions between them?",
+    "tags": ["api", "rest", "graphql"],
+    "author": "apiGeek",
+    "time": "2023-09-21 18:20:00",
+    "views": 1789,
+    "comments": 4,
+    "answer_numbers": 4,
+    "answer_by": ""
+  },
+  {
+    "title": "How to create a responsive mobile app using Flutter?",
+    "body": "I want to develop a mobile app using Flutter, and I need it to be responsive across different devices. What techniques and best practices should I follow?",
+    "tags": ["flutter", "mobile-app", "responsive-design"],
+    "author": "flutterDev",
+    "time": "2023-09-20 14:15:00",
+    "views": 2876,
+    "comments": 7,
+    "answer_numbers": 3,
+    "answer_by": "teacher"
+  },
+  {
+    "title": "How to deploy a Django web application to a production server?",
+    "body": "I have a Django web application that I want to deploy to a production server. What are the steps and best practices for deploying Django apps?",
+    "tags": ["django", "deployment"],
+    "author": "djangoPro",
+    "time": "2023-09-19 11:30:00",
+    "views": 1267,
+    "comments": 6,
+    "answer_numbers": 5,
+    "answer_by": "student"
+  },
+  {
+    "title": "How to optimize SQL queries for performance?",
+    "body": "I'm working with a large database and need to optimize my SQL queries for better performance. What techniques and strategies can I use to achieve this?",
+    "tags": ["sql", "performance", "database"],
+    "author": "sqlNinja",
+    "time": "2023-09-18 17:45:00",
+    "views": 3124,
+    "comments": 9,
+    "answer_numbers": 8,
+    "answer_by": ""
+  },
+  {
+    "title": "How to use React.js with Redux for state management?",
+    "body": "I'm building a web application with React.js and want to use Redux for state management. What's the best way to integrate React.js and Redux?",
+    "tags": ["reactjs", "redux", "state-management"],
+    "author": "reactGuru",
+    "time": "2023-09-17 12:10:00",
+    "views": 2489,
+    "comments": 11,
+    "answer_numbers": 6,
+    "answer_by": "student"
+  },
+  {
+    "title": "How to handle file uploads in PHP?",
+    "body": "I need to implement file uploads in a PHP web application. What PHP functions or libraries should I use to handle file uploads securely?",
+    "tags": ["php", "file-upload"],
+    "author": "phpDevMaster",
+    "time": "2023-09-16 09:20:00",
+    "views": 1890,
+    "comments": 5,
+    "answer_numbers": 4,
+    "answer_by": ""
+  },
+  {
+    "title": "How to write unit tests for Python code using pytest?",
+    "body": "I want to write unit tests for my Python code using pytest. What's the syntax for writing tests, and how can I run them effectively?",
+    "tags": ["python", "testing", "pytest"],
+    "author": "pytestWizard",
+    "time": "2023-09-15 14:50:00",
+    "views": 2341,
+    "comments": 6,
+    "answer_numbers": 5,
+    "answer_by": "student"
+  },
+  {
+    "title": "How to design a RESTful API for a blog platform?",
+    "body": "I'm designing a RESTful API for a blog platform. What are the best practices for structuring the API endpoints and handling CRUD operations on blog posts?",
+    "tags": ["api", "rest", "design"],
+    "author": "restApiDesigner",
+    "time": "2023-09-14 16:30:00",
+    "views": 1678,
+    "comments": 4,
+    "answer_numbers": 3,
+    "answer_by": "teacher"
+  },
+  {
+    "title": "How to use Docker for containerization and deployment?",
+    "body": "I'm new to Docker and want to containerize my applications for easier deployment. What are the basic steps for using Docker effectively?",
+    "tags": ["docker", "containerization", "deployment"],
+    "author": "dockerEnthusiast",
+    "time": "2023-09-13 13:25:00",
+    "views": 1987,
+    "comments": 7,
+    "answer_numbers": 5,
+    "answer_by": ""
+  },
+
+  {
+    "title": "How to implement two-factor authentication (2FA) in a web application?",
+    "body": "I want to add an extra layer of security to my web application by implementing two-factor authentication (2FA). What technologies and methods should I use for 2FA?",
+    "tags": ["security", "authentication", "2fa"],
+    "author": "securityPro",
+    "time": "2023-09-12 20:15:00",
+    "views": 2345,
+    "comments": 9,
+    "answer_numbers": 7,
+    "answer_by": "teacher"
+  },
+  {
+    "title": "How to handle cross-origin resource sharing (CORS) in Node.js?",
+    "body": "I'm building a Node.js API and need to handle CORS to allow requests from different domains. What's the proper way to configure CORS in Node.js?",
+    "tags": ["node.js", "cors"],
+    "author": "corsExpert",
+    "time": "2023-09-11 14:20:00",
+    "views": 1897,
+    "comments": 6,
+    "answer_numbers": 4,
+    "answer_by": ""
+  },
+  {
+    "title": "How to use machine learning to predict customer preferences?",
+    "body": "I want to apply machine learning techniques to predict customer preferences for product recommendations. What algorithms and data preprocessing steps are suitable for this task?",
+    "tags": ["machine-learning", "recommendation", "customer-preferences"],
+    "author": "mlDataScientist",
+    "time": "2023-09-10 11:45:00",
+    "views": 2769,
+    "comments": 8,
+    "answer_numbers": 6,
+    "answer_by": "teacher"
+  },
+  {
+    "title": "How to create a responsive email template with HTML and CSS?",
+    "body": "I need to design a responsive email template that looks good on various email clients. What HTML and CSS techniques should I use for creating responsive email designs?",
+    "tags": ["html", "css", "email-template", "responsive-design"],
+    "author": "emailDesigner",
+    "time": "2023-09-09 09:30:00",
+    "views": 1876,
+    "comments": 7,
+    "answer_numbers": 5,
+    "answer_by": "student"
+  },
+  {
+    "title": "How to implement OAuth 2.0 authentication in a web application?",
+    "body": "I'm building a web application and want to implement OAuth 2.0 for user authentication. What are the steps and best practices for integrating OAuth 2.0 into my app?",
+    "tags": ["oauth2", "authentication", "web-app"],
+    "author": "oauthExpert",
+    "time": "2023-09-08 15:20:00",
+    "views": 2356,
+    "comments": 6,
+    "answer_numbers": 4,
+    "answer_by": ""
+  },
+  {
+    "title": "How to handle pagination in a RESTful API?",
+    "body": "I'm developing a RESTful API and need to implement pagination for large datasets. What's the recommended way to handle pagination in a REST API?",
+    "tags": ["api", "rest", "pagination"],
+    "author": "restApiDeveloper",
+    "time": "2023-09-07 14:10:00",
+    "views": 1987,
+    "comments": 5,
+    "answer_numbers": 3,
+    "answer_by": "student"
+  },
+  {
+    "title": "How to use CSS Grid for layout design?",
+    "body": "I want to use CSS Grid for creating flexible and responsive layouts. What are the key CSS Grid properties and techniques for layout design?",
+    "tags": ["css", "css-grid", "layout-design"],
+    "author": "cssLayoutMaster",
+    "time": "2023-09-06 12:05:00",
+    "views": 2789,
+    "comments": 10,
+    "answer_numbers": 6,
+    "answer_by": "teacher"
+  },
+  {
+    "title": "How to connect a React Native app to a RESTful API?",
+    "body": "I'm building a React Native mobile app and need to fetch data from a RESTful API. What's the process for connecting a React Native app to an API?",
+    "tags": ["react-native", "api", "mobile-app"],
+    "author": "rnAppDeveloper",
+    "time": "2023-09-05 17:30:00",
+    "views": 2134,
+    "comments": 4,
+    "answer_numbers": 4,
+    "answer_by": "student"
+  },
+  {
+    "title": "How to deploy a Node.js application to AWS Lambda?",
+    "body": "I have a Node.js application that I want to deploy as a serverless function on AWS Lambda. What are the steps for deploying a Node.js app to Lambda?",
+    "tags": ["node.js", "aws-lambda", "serverless"],
+    "author": "awsLambdaDev",
+    "time": "2023-09-04 09:55:00",
+    "views": 2456,
+    "comments": 6,
+    "answer_numbers": 5,
+    "answer_by": "teacher"
+  },
+  {
+    "title": "How to perform sentiment analysis using Natural Language Processing (NLP)?",
+    "body": "I'm interested in analyzing sentiment in text data using NLP techniques. What libraries and methods should I use for sentiment analysis?",
+    "tags": ["nlp", "sentiment-analysis", "text-analysis"],
+    "author": "nlpEnthusiast",
+    "time": "2023-09-03 14:40:00",
+    "views": 2678,
+    "comments": 9,
+    "answer_numbers": 7,
+    "answer_by": "student"
+  },
+  {
+    "title": "How to create a responsive navigation menu with HTML and CSS?",
+    "body": "I need to design a responsive navigation menu for my website. What HTML and CSS practices are recommended for creating responsive navigation menus?",
+    "tags": ["html", "css", "navigation-menu", "responsive-design"],
+    "author": "webDesigner",
+    "time": "2023-09-02 18:15:00",
+    "views": 1897,
+    "comments": 5,
+    "answer_numbers": 4,
+    "answer_by": "teacher"
+  }
+]

@@ -1,6 +1,12 @@
+import { useState } from "react"
+
 export default function Header() {
+
+    const [toggle, setToggle] =useState(false)
+
   return (
-    <div className='w-full h-16 flex justify-between items-center'>
+    <>
+    <div className='w-full h-16 flex justify-between items-center md:hidden'>
         <h1 className="text-2xl font-bold ml-4">DISCUSSION FORUM</h1>
         
         <div className="w-[45%]">
@@ -26,8 +32,47 @@ export default function Header() {
                 <h1>Login</h1>
             </button>            
         </div>
-
-
     </div>
+
+
+    <div className='w-full h-16 justify-between items-center hidden md:flex'>
+
+        <h1 className="text-2xl font-bold ml-4">DISCUSSION FORUM</h1>
+        <div className="h-full w-[60%] flex flex-col items-end">
+        <button onClick={()=>{setToggle(!toggle)}} className="mr-4 mt-4 w-10 h-10 text-white bg-accent-color hover:bg-accent-hover font-medium rounded-lg" type="button">
+            {
+                toggle?
+                <i className="fa-solid fa-chevron-up"></i>
+                :<i className="fa-solid fa-chevron-down"></i>
+            }
+        </button>
+        {
+            toggle && 
+            <div className="z-10 bg-white divide-y divide-gray-300 rounded-lg shadow w-60 relative top-8 right-4">
+                <div className="px-4 py-3 text-sm text-gray-900">
+                <div className="relative">
+                    <input type="search" id="default-search" className="h-10 block w-full p-4 pl-10 text-sm border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 " placeholder="Search" required />
+                    <button type="submit" className="h-8 text-white absolute right-2.5 bottom-[0.25rem] bg-accent-color hover:bg-accent-hover focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2"><i className="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+                </div>
+                <ul className="py-2 text-sm text-gray-700" aria-labelledby="dropdownInformationButton">
+                <li>
+                    <a href="#" className="block px-4 py-2 hover:bg-gray-100">Dashboard</a>
+                </li>
+                <li>
+                    <a href="#" className="block px-4 py-2 hover:bg-gray-100">Settings</a>
+                </li>
+                <li>
+                    <a href="#" className="block px-4 py-2 hover:bg-gray-100">Questions</a>
+                </li>
+                </ul>
+                <div className="py-2">
+                <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Sign out</a>
+                </div>
+            </div>        
+        }
+        </div>
+    </div>
+    </>
   )
 }
