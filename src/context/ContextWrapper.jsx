@@ -7,11 +7,15 @@ export default function ContextWrapper(props) {
     const [pageNumber,setPageNumber] = useState(0)
     const numberOfQuestionsPerPage = 10
 
+    const [questionData,setQuestionData] = useState()
+    console.log(questionData);
     const value = {
         questions,
         pageNumber,
         setPageNumber,
-        numberOfQuestionsPerPage
+        numberOfQuestionsPerPage,
+        questionData,
+        setQuestionData
     }
   return (
       <GlobalContext.Provider value={value}>

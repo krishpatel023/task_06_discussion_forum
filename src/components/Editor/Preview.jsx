@@ -27,13 +27,19 @@ import {
 
 import './styles.css'
 
-function Placeholder() {
-  return <div className="editor-placeholder">Enter some text...</div>;
+import Showdown, {Converter} from "showdown";
+import { useEffect, useState } from "react";
+import MarkdownView from 'react-showdown';
+import { useLexicalComposerContext } from "@lexical/react/LexicalComposerContext";
+
+function Placeholder({data}) {
+  return <div className="editor-placeholder">{data?data:null}</div>;
 }
 
 const editorConfig = {
   // The editor theme
   theme: ExampleTheme,
+  readOnly: true,
   // Handling of errors during update
   onError(error) {
     throw error;
@@ -54,44 +60,54 @@ const editorConfig = {
   ]
 };
 
+const Update = ({ value }) => {
+  const [editor2] = useLexicalComposerContext();
+
+  useEffect(() => {
+    if (value) {
+      editor2.setEditorState(value);
+    }
+  }, [editor2, value]);
+
+  return null;
+};
+  
+
+export default function Preview({data}) {
+
+    const [editor] = useLexicalComposerContext()
+        
+    useEffect(() => {
+        editor.update(() => {
+        if (data) {
+            editor.setEditorState(editor.parseEditorState(data))
+        }
+        })
+    },[])
+    const [display,setDisplay]=useState()
 
 
-export default function Editor({handleQuestion}) {
-  const funcChange = (editorState) => {
-    editorState.read(() => {
-        const markdown = $convertToMarkdownString(TRANSFORMERS);
-
-        handleQuestion(TRANSFORMERS)
-        //YOU WILL BE ABLE TO GET THE OUTPUT FROM HERE
-        // console.log(markdown);
+    data.read(() => {
+      const editorStateWithoutSelection = editorState.clone(null);
+      setDisplay(editorStateWithoutSelection);
     });
-  }
-  return (
+    return (
     <div className="hello">
-
-    
-    <LexicalComposer initialConfig={editorConfig}>
-      <div className="editor-container">
-        <ToolbarPlugin />
-        <div className="editor-inner">
-          <RichTextPlugin
-            contentEditable={<ContentEditable className="editor-input" />}
-            placeholder={<Placeholder />}
-            ErrorBoundary={LexicalErrorBoundary}
-          />
-          <HistoryPlugin />
-          <OnChangePlugin onChange={funcChange}/>
-          {/* <TreeViewPlugin /> */}
-          {/* <AutoFocusPlugin /> */}
-          <CodeHighlightPlugin />
-          <ListPlugin />
-          <LinkPlugin />
-          <AutoLinkPlugin />
-          <ListMaxIndentLevelPlugin maxDepth={7} />
-          <MarkdownShortcutPlugin transformers={TRANSFORMERS} />
-        </div>
-      </div>
-    </LexicalComposer>
+      <LexicalComposer
+        initialConfig={{
+          onError(error) {
+            throw error;
+          },
+          readOnly: true,
+          nodes: []
+        }}
+      >
+        <Update value={display} />
+        <RichTextPlugin
+          placeholder={null}
+          contentEditable={<ContentEditable />}
+        />
+      </LexicalComposer>
     </div>
   );
 }

@@ -6,7 +6,7 @@ import Day from './Day';
 export default function ContributionChart() {
     
     const currentMonthIndex = dayjs().month()
-    const [data, setData] = useState(getYear(-3))
+    const [data, setData] = useState(getYear(0))
     const monthNames = getMonthName()
 
     const contributionData = generateRandomeData()

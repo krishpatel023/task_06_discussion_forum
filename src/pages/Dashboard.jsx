@@ -12,7 +12,7 @@ export default function Dashboard() {
         <div className='w-[70%] bg-white rounded mt-8 mb-8 flex flex-col items-center sm:w-full sm:mt-0 sm:mb-0'>
             <div className='w-[90%] h-60 flex justify-between items-center'>
                 <div className='w-40 h-40 bg-red-800 rounded'>
-                    <img className='object-cover h-full w-full' src={ProfilePic} alt="" />
+                    <img className='object-cover h-full w- rounded' src={ProfilePic} alt="" />
                 </div>
                 <div className='w-[calc(95%-10rem)] flex flex-col justify-center gap-2'>
                     <h1 className='text-3xl'>Krish Patel</h1>

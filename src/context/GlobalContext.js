@@ -5,6 +5,8 @@ const GlobalContext = React.createContext({
     setQuestions : () => {},
     pageNumber : [],
     setPageNumber : () => {},
+    questionData : [],
+    setQuestionData : () => {}
 })
 
 export default GlobalContext

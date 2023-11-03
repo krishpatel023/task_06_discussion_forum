@@ -47,7 +47,7 @@ function getRandomDate(startDate, endDate) {
       dateArray.push({
          date: randomDate.format("DD-MM-YYYY"),
          contributions : getRandomContributions( maxContributions)
-    });
+      });
     }
     return dateArray;
   }
@@ -57,8 +57,8 @@ function getRandomDate(startDate, endDate) {
  export function generateRandomeData(){
       // Define the start and end dates
     const startDate = new Date('2022-10-01');
-    const endDate = new Date('2023-09-30');
-    const numberOfDates = 90
+    const endDate = new Date(dayjs().format("YYYY-MM-DD"));
+    const numberOfDates = 220
     const maxContributions = 100
     // Generate an array of 10 objects with random dates
     const randomDateArray = generateRandomDateArray(startDate, endDate, numberOfDates,  maxContributions);

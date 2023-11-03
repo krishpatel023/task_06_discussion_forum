@@ -1,9 +1,10 @@
 import { useState } from "react"
+import { useNavigate } from "react-router"
 
 export default function Header() {
 
     const [toggle, setToggle] =useState(false)
-
+    const navigate = useNavigate()
   return (
     <>
     <div className='w-full h-16 flex justify-between items-center md:hidden'>
@@ -24,11 +25,20 @@ export default function Header() {
         </div>
 
         <div className="flex gap-2 mr-4">
-            <button className="w-40 h-10 bg-accent-color hover:bg-accent-hover text-accent-complementary rounded-md">
+            <button className="w-20 h-10 hover:bg-[#B7C5CC] bg-[#E0E5F5] rounded-md"
+                onClick={()=>navigate('/dashboard')}
+            >
+                <h1><i className="fa-solid fa-chart-line"></i></h1>
+            </button>     
+            <button className="w-40 h-10 bg-accent-color hover:bg-accent-hover text-white rounded-md"
+                onClick={()=>navigate('/askquestion')}
+            >
                 <h1>Ask A Question</h1>
             </button>
 
-            <button className="w-40 h-10 hover:bg-[#B7C5CC] bg-[#E0E5F5] rounded-md">
+            <button className="w-40 h-10 hover:bg-[#B7C5CC] bg-[#E0E5F5] rounded-md"
+                onClick={()=>navigate('/signin')}
+            >
                 <h1>Login</h1>
             </button>            
         </div>
